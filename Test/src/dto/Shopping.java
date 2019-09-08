@@ -6,7 +6,7 @@ public class Shopping  implements Serializable {
  private String subject; // ªÛ«∞ «∞∏Ò 
  private Integer price; //ø ∞°∞› 
  private String size; //ø ªÁ¿Ã¡Ó
- private String images; // ø  ¿ÃπÃ¡ˆ
+ private String filename; // ø  ¿ÃπÃ¡ˆ
  
  
   public Shopping() {
@@ -33,8 +33,8 @@ public class Shopping  implements Serializable {
   public String getSize() {
 	  return size;
   }
-  public String getImages() {
-	  return images;
+  public String getFilename() {
+	  return filename;
   }
   
   public void setId(String id) {
@@ -49,8 +49,8 @@ public class Shopping  implements Serializable {
   public void setSize(String size) {
 	  this.size= size;
   }
-  public void setImages(String images) {
-	  this.images= images;
+  public void setFilename(String filename) {
+	  this.filename= filename;
   }
   
 

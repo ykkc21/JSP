@@ -30,9 +30,24 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>WebContent/resources/images/Pants.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Desktop/Pants.jpg</locationURI>
+		</link>
+		<link>
+			<name>WebContent/resources/images/img1.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Desktop/img1.jpg</locationURI>
+		</link>
+		<link>
+			<name>WebContent/resources/images/mantoan.jpg</name>
+			<type>1</type>
+			<locationURI>PARENT-3-PROJECT_LOC/Desktop/mantoan.jpg</locationURI>
+		</link>
+		<link>
 			<name>WebContent/resources/images/shirt.jpeg</name>
 			<type>1</type>
-			<locationURI>PARENT-2-PROJECT_LOC/Desktop/shirt.jpeg</locationURI>
+			<locationURI>PARENT-3-PROJECT_LOC/Desktop/shirt.jpeg</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
