@@ -1,5 +1,6 @@
 <%@ page contentType="text/html; charset=utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page session="true" %>
 <%
 	String sessionId = (String) session.getAttribute("sessionId");
 %>
@@ -8,16 +9,17 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
 		<div class="container">
 			<div class="navber-header" >
-				<a href="./welcome.jsp">home</a>
+				<ahref="../welcome.jsp">home</a>
 			</div>
 		</div>
 		<div>
-			<ul class="navbar-nav mr-auto">
+			<ul class="navbar-nav mr">
 			<c:choose>
 				<c:when test="${empty sessionId} }">
 					<li><a class="nav-link" href='<c:url value="/member/loginMember.jsp"/>'>로그인</a></li>
@@ -26,7 +28,7 @@
 				<c:otherwise>
 					<li style="padding-top: 7px; color: white;">[<%= sessionId %>]님</li>
 					<li class="nav-item"><a href='<c:url value="/member/logoutMember.jsp" />'>로그아웃</a></li>
-					<li class="nav-item"><a href='<c:url value="/member/updateMember.jsp" />'>회원수정</a></li>
+					<li class="nav-item"><a href='<c:url value="/member/updateMember.jsp?id=<%= sessionId %>" />'>수정</a></li>
 				</c:otherwise>
 			</c:choose>
 				<li class="nav-itme"><a class="nav-link" href="./products.jsp">상품목록</a></li>

@@ -2,6 +2,7 @@
     pageEncoding="utf-8"%>
     <%@ page import="java.sql.*" %>
     <%@ include file="../dbconn.jsp" %>
+    <%@ page session="true" %>
 <%
 
 String id = request.getParameter("id");
@@ -18,11 +19,7 @@ pstmt.setString(2, pw);
 rs = pstmt.executeQuery();
 rs.next();
 
-if(rs.getString("cnt").equals("1")){
-	session.setAttribute("id", id);
-	session.setAttribute("password", pw);
-	
-}
+session.setAttribute("sessionId", id);
 
 if(rs != null)
 	rs.close();

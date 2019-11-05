@@ -1,12 +1,12 @@
 <%@page import="javax.print.DocFlavor.STRING"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-   <%@ page import="com.oreilly.servlet.*" %>
-   <%@ page import="com.oreilly.servlet.multipart.*" %>
+
    <%@ page import="java.util.*" %>
    <%@ page import="java.sql.*" %>
    <%@ include file="dbconn.jsp" %>
-   
+      <%@ page import="com.oreilly.servlet.*" %>
+   <%@ page import="com.oreilly.servlet.multipart.*" %>
    <%
    
    	String filename = "";
@@ -78,7 +78,6 @@
    				pstmt.setString(8, fileName);
    				pstmt.setString(9, productId);
    				pstmt.executeUpdate();
-   	   		
    	   	}
    			
    	}
@@ -90,7 +89,7 @@
    	if(conn != null)
    		conn.close();
    	
-   	response.sendRedirect("editProduct.jsp?edit=update");
+   		response.sendRedirect("editProduct.jsp?edit=update");
    	}
     
     

@@ -49,5 +49,5 @@
 	
 
 
-	response.sendRedirect("./member/rersultMember.jsp");
+	response.sendRedirect("../resultMember.jsp");
 %>

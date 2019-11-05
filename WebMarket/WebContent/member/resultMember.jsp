@@ -1,19 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
-    <%@ page import=java.sql.*" %>
-    <%@ include file="/dbconn.jsp"%>
+    <%@ page import="java.sql.*"%>
+    <%@ include file="../dbconn.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>회원 리스트</title>
 </head>
 <body>
 		<jsp:include page="../header.jsp" />
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">상품 목록</h1>
-			<a href="./addProduct.jsp">상품 등록</a>
+			<h1 class="display-3">회원조희</h1>
 		</div>
 	</div>
 
@@ -28,13 +27,12 @@
 				while(rs.next()){
 			%>
 			<div class="col-md-4">
-				<img alt="img" src="./images/<%= rs.getString("p_fileName")%>"style="width: 100%">
-				<h3><%= rs.getString("p_name") %></h3>
-				<p><%= rs.getString("p_description") %>
-				<p><%= rs.getString("p_UnitPrice") %>원
-				<p><a href="./product.jsp?id=<%=rs.getString("p_id")%>" class="btn btn-secondary" role="button">상세 정보 &raquo;</a>
-				
-				
+				<p>이름 : <%= rs.getString("name") %></p>
+				<p>성별 : <%= rs.getString("gender") %>
+				<p>생년월일 : <%= rs.getString("birth") %>
+				<p>전화번호 : <%= rs.getString("phone") %>
+				<p>주소 : <%= rs.getString("address") %>
+				<p>가입날짜 : <%= rs.getString("regist_day") %>
 			</div>
 			<%
 				}

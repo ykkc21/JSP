@@ -3,7 +3,6 @@
     <%@ page import="java.sql.*"%>
 	<%@ include file="../dbconn.jsp"%>
     <%
-    
-    	if(session!= null) session.invalidate();
+    	session.invalidate();
     	response.sendRedirect("../welcome.jsp");
     %>
