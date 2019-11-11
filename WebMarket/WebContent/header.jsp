@@ -15,13 +15,13 @@
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
 		<div class="container">
 			<div class="navber-header" >
-				<ahref="../welcome.jsp">home</a>
+				<a href="../welcome.jsp">home</a>
 			</div>
 		</div>
 		<div>
 			<ul class="navbar-nav mr">
 			<c:choose>
-				<c:when test="${empty sessionId} }">
+				<c:when test="${ empty sessionId }">
 					<li><a class="nav-link" href='<c:url value="/member/loginMember.jsp"/>'>로그인</a></li>
 					<li><a class="nav-link" href='<c:url value="/member/addMember.jsp"/>'>회원가입</a></li>
 				</c:when>

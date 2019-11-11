@@ -11,15 +11,17 @@ String pw = request.getParameter("password");
 PreparedStatement pstmt = null;
 ResultSet rs = null;
 
-
-String sql = "select * from member where id = ? and password=?";
+String sql = "select * from member where id = ? and password = ? ";
 pstmt =  conn.prepareStatement(sql);
 pstmt.setString(1, id);
 pstmt.setString(2, pw);
 rs = pstmt.executeQuery();
-rs.next();
 
-session.setAttribute("sessionId", id);
+while(rs.next()){
+	session.setAttribute("sessionId", id);	
+}
+
+
 
 if(rs != null)
 	rs.close();
