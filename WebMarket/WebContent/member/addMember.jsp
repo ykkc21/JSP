@@ -55,6 +55,7 @@
 </style>
 </head>
 <body>
+<jsp:include page="../header.jsp"/>
     <div class="main">
         <form  action="processAddMember.jsp" method="post">
             <h1>Welcome</h1>

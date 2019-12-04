@@ -15,7 +15,7 @@
 	<nav class="navbar navbar-expand navbar-dark bg-dark">
 		<div class="container">
 			<div class="navber-header" >
-				<a href="../welcome.jsp">home</a>
+				<a href="welcome.jsp">home</a>
 			</div>
 		</div>
 		<div>
@@ -28,13 +28,13 @@
 				<c:otherwise>
 					<li style="padding-top: 7px; color: white;">[<%= sessionId %>]님</li>
 					<li class="nav-item"><a href='<c:url value="/member/logoutMember.jsp" />'>로그아웃</a></li>
-					<li class="nav-item"><a href='<c:url value="/member/updateMember.jsp?id=<%= sessionId %>" />'>수정</a></li>
 				</c:otherwise>
 			</c:choose>
 				<li class="nav-itme"><a class="nav-link" href="./products.jsp">상품목록</a></li>
 				<li class="nav-itme"><a class="nav-link" href="./addProduct.jsp">상품등록</a></li>
 				<li class="nav-itme"><a class="nav-link" href="./editProduct.jsp?edit=update">상품수정</a></li>
 				<li class="nav-itme"><a class="nav-link" href="./editProduct.jsp?edit=delete">상품삭제</a></li>
+				<li class="nav-itme"><a class="nav-link" href="./member/resultMember.jsp">회원정보</a></li>
 				<li class="nav-itme"><a class="nav-link" href='<c:url value="/BoardListAction.do?pageNum=1" />'>게시판</a></li>
 			</ul>
 		</div>

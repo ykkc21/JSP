@@ -11,11 +11,13 @@ CREATE TABLE IF NOT EXISTS product(
 	PRIMARY KEY(p_id)
 )default CHARSET=utf8;
 
+
+
 create table member (
-	id varchar(10) not null,
+	id varchar(10) not null ,
 	password varchar(10) not null,
 	name varchar(10) not null,
-	gender varchar(4),
+	gender varchar(10),
 	birth varchar(10),
 	mail varchar(30),
 	phone varchar(20),
@@ -24,4 +26,5 @@ create table member (
 	primary key(id)
 ) default CHARSET=utf8;
 	
+select * from member;
 	

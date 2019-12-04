@@ -41,6 +41,8 @@
 	pstmt.setString(9, today);
 	pstmt.executeUpdate();
 
+	
+	
 	if (pstmt != null)
 		pstmt.close();
 	if (conn != null)
@@ -49,5 +51,5 @@
 	
 
 
-	response.sendRedirect("../resultMember.jsp");
+	response.sendRedirect("../welcome.jsp");
 %>
